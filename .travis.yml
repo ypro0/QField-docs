@@ -29,9 +29,14 @@ install:
   - tlmgr install babel-german
   - tlmgr install babel-romanian
   - tlmgr install babel-italian
+  - tlmgr install babel-spanish
+  - tlmgr install babel-polish
+  - tlmgr install babel-portuguese
+  - tlmgr install babel-hungarian
 
 before_script:
   - ./scripts/ci/setup_git.sh
+  - make transifex_sync
 
 script:
   - ./scripts/build-docs.sh
