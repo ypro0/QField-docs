@@ -85,11 +85,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../project-management/index.html">QField Projektverwaltung</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">QField Benutzerhandbuch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#opening-a-project">Ein Projekt öffnen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#identifying-features">Objekte identifizieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gps">GPS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#digitzing">Digitalisieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-workflow">Basic workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#opening-a-project">Ein Projekt öffnen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identifying-features">Objekte identifizieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exceptions-to-identified-layers">Exceptions to identified layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -138,24 +141,29 @@
             
   <div class="section" id="qfield-user-guide">
 <h1>QField Benutzerhandbuch<a class="headerlink" href="#qfield-user-guide" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="basic-workflow">
+<h2>Basic workflow<a class="headerlink" href="#basic-workflow" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="opening-a-project">
-<h2>Ein Projekt öffnen<a class="headerlink" href="#opening-a-project" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Ein Projekt öffnen<a class="headerlink" href="#opening-a-project" title="Link zu dieser Überschrift">¶</a></h3>
 </div>
 <div class="section" id="identifying-features">
-<h2>Objekte identifizieren<a class="headerlink" href="#identifying-features" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Objekte identifizieren<a class="headerlink" href="#identifying-features" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein langer Druck auf ein Objekt identifiziert dieses und öffnet das Attributformular. Der zurück Knopf schliesst das Fenster wieder.</p>
-</div>
+<div class="section" id="exceptions-to-identified-layers">
+<h4>Exceptions to identified layers<a class="headerlink" href="#exceptions-to-identified-layers" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Often it is not required to be able to query every layer. Some layers are only present as basemap and their attributes are not of interest.</p>
+<p>You can manage this layerlist in QGIS desktop in <span class="menuselection">Project ‣ Project Properties ‣ Identify Layers</span> and uncheck the base layers.</p>
 <div class="section" id="gps">
-<h2>GPS<a class="headerlink" href="#gps" title="Link zu dieser Überschrift">¶</a></h2>
+<h5>GPS<a class="headerlink" href="#gps" title="Link zu dieser Überschrift">¶</a></h5>
 <p>A long press on the GPS button will show the GPS menu.</p>
 </div>
 <div class="section" id="custom-svg-symbols-and-settings">
-<h2>Custom SVG symbols and settings<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Link zu dieser Überschrift">¶</a></h2>
+<h5>Custom SVG symbols and settings<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Link zu dieser Überschrift">¶</a></h5>
 <p>In the about dialog you can see where the shared folders are in your device.
 If you need to use custom symbols you need to put them there using a file manager.</p>
 </div>
 <div class="section" id="digitzing">
-<h2>Digitalisieren<a class="headerlink" href="#digitzing" title="Link zu dieser Überschrift">¶</a></h2>
+<h5>Digitalisieren<a class="headerlink" href="#digitzing" title="Link zu dieser Überschrift">¶</a></h5>
 <p>To start digitizing new features, click on the menu button and choose <em>mode</em> &gt;
 <em>digitize</em>.</p>
 <p>A new combobox will appear next to the menu button which lists the layers
@@ -166,6 +174,9 @@ click the check at the lower right of the screen to confirm the creation of a
 new point feature. If the feature form is not suppressed (in the QGIS project
 vector layer properties), the user will be asked to enter the attributes for
 the new feature.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 
