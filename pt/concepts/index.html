@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Conceitos &mdash; Documentação QField 0.5.2 - Elbrus</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Documentação QField 0.5.2 - Elbrus" href="../index.html"/>
+        <link rel="next" title="QField Project Management" href="../project-management/index.html"/>
+        <link rel="prev" title="QField Installation Guide" href="../installation-guide/index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QField
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">QField Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Conceitos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#keep-it-simple">Keep it simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#be-compatible-with-qgis">Be compatible with QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-based">Mode based</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/index.html">QField Project Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/index.html#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html">Supported data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">QField User Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QField</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Conceitos</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/opengisch/QField-docs/blob/master/en/concepts/index.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="concepts">
+<h1>Conceitos<a class="headerlink" href="#concepts" title="Link permanente para este título">¶</a></h1>
+<p>QField was designed with a few key concepts in mind.</p>
+<div class="section" id="keep-it-simple">
+<h2>Keep it simple<a class="headerlink" href="#keep-it-simple" title="Link permanente para este título">¶</a></h2>
+<p>The requirements on the field are not the same as on a desktop. The screen is
+smaller, the input devices are different and the tasks are different.</p>
+<p>QField aims to help the user to perform the tasks he needs to do without
+cluttering the user interface. This means, that only tasks which need to be
+done on the field are availble from the interface. Everything else is not.</p>
+<p>This means that everything like layer styling, form definitions and other
+project setup steps should be done on a computer with QGIS installed first.</p>
+</div>
+<div class="section" id="be-compatible-with-qgis">
+<h2>Be compatible with QGIS<a class="headerlink" href="#be-compatible-with-qgis" title="Link permanente para este título">¶</a></h2>
+<p>QField is based on QGIS. It is not a rebuild of QGIS it really <em>does</em> use QGIS
+libraries. The rendering engine is exactly the same as in QGIS for desktop and
+your project will therefore look exactly the same on your mobile device as it
+does on your computer.</p>
+<p>If something is already available as a configuration option in a QGIS project,
+it should not be re-invented. QField therefore uses the same edit widgets as
+QGIS desktop does. If a project is already configured for the desktop, it
+should just run on mobile as well.</p>
+<p>Remember, this is just the <em>concept</em>. This is what we have in mind when we
+develop QField. It does not mean that it is already completely there yet.</p>
+</div>
+<div class="section" id="mode-based">
+<h2>Mode based<a class="headerlink" href="#mode-based" title="Link permanente para este título">¶</a></h2>
+<p>QField is built around <em>modes</em>. Modes are similar to a <em>map tool</em> in QGIS
+desktop. A mode defines the task which a user is currently doing. Either a user
+is <em>browsing</em> through the data or he is <em>digitizing</em> something new.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project-management/index.html" class="btn btn-neutral float-right" title="QField Project Management" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../installation-guide/index.html" class="btn btn-neutral" title="QField Installation Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, The QField Project/OPENGIS.ch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.2 - Elbrus',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
