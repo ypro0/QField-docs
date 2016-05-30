@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="documentation QField 0.5.2 - Elbrus" href="../index.html"/>
-        <link rel="next" title="Supported data formats" href="dataformat.html"/>
+        <link rel="next" title="Formats de données supportés" href="dataformat.html"/>
         <link rel="prev" title="Concepts" href="../concepts/index.html"/> 
 
   
@@ -88,15 +88,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Gestion du projet QField</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data-sources">Sources de données</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Vector Layer Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Configuration des couches vecteur</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#style">Style</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Forms and Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formulaires et attributs</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataformat.html">Supported data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Symboles SVG personnalisés et configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataformat.html">Formats de données supportés</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">Guide d&#8217;utilisateur QField</a></li>
 </ul>
 
@@ -158,22 +158,24 @@
 <p>Bien que de nombreux formats soient supportés, certains problèmes de stabilité existent avec OGR (p.e. shapes). Pour une meilleure stabilité, il est conseillé d&#8217;utiliser Spatialite ou PostGIS.</p>
 </div>
 <div class="section" id="vector-layer-settings">
-<h2>Vector Layer Settings<a class="headerlink" href="#vector-layer-settings" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Most of the settings which QGIS offers are directly supported by QField without any extra effort.</p>
+<h2>Configuration des couches vecteur<a class="headerlink" href="#vector-layer-settings" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La majeur partie des configuration offertes par QGIS sont directement supportées par QField sans développement supplémentaire.</p>
 <div class="section" id="style">
 <h3>Style<a class="headerlink" href="#style" title="Lien permanent vers ce titre">¶</a></h3>
-<p>All style settings from QGIS are directly supported by QField. This includes all renderer types like graduated, categorized, rule based, 2.5D as well as data defined symbology.</p>
+<p>Toutes les configurations de style de QGIS sont directement supportées dans QField. Cela inclut tous les types de rendu comme les dégradés, la thématisation, les règles, le 2.5D ainsi que la symbologie définie par les données.</p>
 </div>
 <div class="section" id="forms-and-fields">
-<h3>Forms and Fields<a class="headerlink" href="#forms-and-fields" title="Lien permanent vers ce titre">¶</a></h3>
-<p>QField creates forms similar to, but not equal to QGIS.</p>
+<h3>Formulaires et attributs<a class="headerlink" href="#forms-and-fields" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les formulaires QField sont similaires à ceux de QGIS, mais pas identiques.</p>
 <dl class="docutils">
-<dt>Suppress Feature Form</dt>
-<dd>The setting suppress feature form is directly applied to the QField form.</dd>
-<dt>Remember last values</dt>
-<dd>QField offers a much more fine-grained control over the last used values and ignores the QGIS setting.</dd>
-<dt>Field settings</dt>
-<dd><p class="first">The field settings from QGIS are supported on a beste effort basis and is constantly being improved.</p>
+<dt>Formulaire de suppression d&#8217;objet</dt>
+<dd><p class="first last">La configuration du formulaire de suppression d&#8217;objet est directement appliquée au formulaire QField.</p>
+</dd>
+<dt>Se souvenir des dernières valeurs</dt>
+<dd><p class="first last">QField offre un contrôle fin des dernières valeurs utilisées et ignore la configuration de QGIS.</p>
+</dd>
+<dt>Configuration des attributs</dt>
+<dd><p class="first">La configuration des attributs de QGIS est reprise au mieux et améliorée constamment.</p>
 <table border="1" class="last docutils">
 <colgroup>
 <col width="19%" />
@@ -181,21 +183,26 @@
 <col width="67%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Field type</th>
+<tr class="row-odd"><th class="head"><p class="first last">Type d&#8217;attribut</p>
+</th>
 <th class="head">Support</th>
 <th class="head">Notes</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Text Edit</td>
+<tr class="row-even"><td><p class="first last">Edition de texte</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td><ul class="first last simple">
-<li>Multiline is always allowed</li>
-<li>HTML is not supported</li>
+<li><p class="first">Le multiligne est toujours possible</p>
+</li>
+<li><p class="first">HTML n&#8217;est pas supporté</p>
+</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td>Check Box</td>
+<tr class="row-odd"><td><p class="first last">Case à cocher</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
@@ -211,9 +218,8 @@
 </div>
 </div>
 <div class="section" id="custom-svg-symbols-and-settings">
-<h1>Custom SVG symbols and settings<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Lien permanent vers ce titre">¶</a></h1>
-<p>In the about dialog you can see where the shared folders are in your device.
-If you need to use custom symbols you need to put them there using a file manager.</p>
+<h1>Symboles SVG personnalisés et configuration<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans le boîte de dialogue &#8220;A propos&#8221;, le chemin d&#8217;accès aux fichiers partagés est inscrit. En cas de besoin, les symboles personnalisés doivent être copiés à cet endroit.</p>
 </div>
 
 
@@ -223,7 +229,7 @@ If you need to use custom symbols you need to put them there using a file manage
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dataformat.html" class="btn btn-neutral float-right" title="Supported data formats" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dataformat.html" class="btn btn-neutral float-right" title="Formats de données supportés" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../concepts/index.html" class="btn btn-neutral" title="Concepts" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="documentation QField 0.5.2 - Elbrus" href="../index.html"/>
-        <link rel="prev" title="Supported data formats" href="../project-management/dataformat.html"/> 
+        <link rel="prev" title="Formats de données supportés" href="../project-management/dataformat.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,22 +86,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Guide d&#8217;installation QField</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../project-management/index.html">Gestion du projet QField</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../project-management/index.html#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html">Supported data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/index.html#custom-svg-symbols-and-settings">Symboles SVG personnalisés et configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html">Formats de données supportés</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Guide d&#8217;utilisateur QField</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#basic-workflow">Workflow basic</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#switch-modes">Switch modes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switch-modes">Changement du mode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#opening-a-project">Ouvrir un projet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#identify-features">Identify features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#identify-features">Interroger des objets</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#exceptions-to-identified-layers">Couche identifiables</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#gps">GPS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#digitize">Digitize</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#attribute-form">Attribute form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitize">Digitaliser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-form">Formulaire d&#8217;attributs</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#delete-features">Delete Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-features">Supprimer des objets</a></li>
 </ul>
 </li>
 </ul>
@@ -155,14 +155,14 @@
 <div class="section" id="basic-workflow">
 <h2>Workflow basic<a class="headerlink" href="#basic-workflow" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="switch-modes">
-<h3>Switch modes<a class="headerlink" href="#switch-modes" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Modes are switched via <span class="menuselection">Menu button ‣ mode</span></p>
+<h3>Changement du mode<a class="headerlink" href="#switch-modes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le mode peut être changé via <span class="menuselection">Menu button ‣ mode</span></p>
 </div>
 <div class="section" id="opening-a-project">
 <h3>Ouvrir un projet<a class="headerlink" href="#opening-a-project" title="Lien permanent vers ce titre">¶</a></h3>
 </div>
 <div class="section" id="identify-features">
-<h3>Identify features<a class="headerlink" href="#identify-features" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Interroger des objets<a class="headerlink" href="#identify-features" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Effectuer un &#8220;long press&#8221;, c&#8217;est à dire maintenir le doigt sur l&#8217;écran pendant quelques secondes, pour interroger les objets sur la carte. Appuyer sur le bouton retour de l&#8217;appareil pour fermer la fenêtre des résultats.</p>
 <div class="section" id="exceptions-to-identified-layers">
 <h4>Couche identifiables<a class="headerlink" href="#exceptions-to-identified-layers" title="Lien permanent vers ce titre">¶</a></h4>
@@ -175,20 +175,18 @@
 <p>Effectuer un &#8220;long press&#8221; sur le bouton GPS pour afficher le menu GPS.</p>
 </div>
 <div class="section" id="digitize">
-<h3>Digitize<a class="headerlink" href="#digitize" title="Lien permanent vers ce titre">¶</a></h3>
-<p>To start digitizing new features <a class="reference internal" href="#switch-modes">Switch modes</a> to digitizing.</p>
+<h3>Digitaliser<a class="headerlink" href="#digitize" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour commencer à digitaliser de nouveaux objets <a href="#id1"><span class="problematic" id="id2">`Switch modes`_</span></a> to digitizing.</p>
 <p>Une liste déroulante contenant les couches disponibles pour la dessin apparaît. A ce jour (QField 0.5), seules les couches de points peuvent être éditées.</p>
 <p>Déplacer le réticule situé au centre de la carte sur la position désirée et cliquer sur le bouton &#8220;vu&#8221; pour confirmer la création d&#8217;un nouveau point. Si le formulaire de l&#8217;objet n&#8217;est pas supprimé (dans les propriétés de la couche du projet QGIS), un formulaire apparaît pour la saisie des attributs.</p>
 <div class="section" id="attribute-form">
-<h4>Attribute form<a class="headerlink" href="#attribute-form" title="Lien permanent vers ce titre">¶</a></h4>
-<p>The form which appears allows entering attribute values for the new feature. The checkboxes
-at the right of every attribute allow for remembering each attribu. The checkboxes
-at the right of every attribute allow for remembering each attribute individually.</p>
+<h4>Formulaire d&#8217;attributs<a class="headerlink" href="#attribute-form" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Le formulaire qui apparaît permet d&#8217;entrer les valeurs d&#8217;attributs pour le nouveau objet.</p>
 </div>
 </div>
 <div class="section" id="delete-features">
-<h3>Delete Features<a class="headerlink" href="#delete-features" title="Lien permanent vers ce titre">¶</a></h3>
-<p>To delete a feature, identify it first and tap the trash icon.</p>
+<h3>Supprimer des objets<a class="headerlink" href="#delete-features" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour supprimer un objet, l&#8217;interroger puis appuyer sur l&#8217;icône poubelle.</p>
 </div>
 </div>
 </div>
@@ -201,7 +199,7 @@ at the right of every attribute allow for remembering each attribute individuall
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../project-management/dataformat.html" class="btn btn-neutral" title="Supported data formats" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../project-management/dataformat.html" class="btn btn-neutral" title="Formats de données supportés" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
