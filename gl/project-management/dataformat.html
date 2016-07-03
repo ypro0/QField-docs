@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Supported data formats &mdash; QField 0.5.2 - Elbrus documentation</title>
+  <title>Formatos de datos admitidos &mdash; QField 0.5.2 - Elbrus documentation</title>
   
 
   
@@ -34,7 +34,7 @@
   
     <link rel="top" title="QField 0.5.2 - Elbrus documentation" href="../index.html"/>
         <link rel="next" title="QField User Guide" href="../user-guide/index.html"/>
-        <link rel="prev" title="QField Project Management" href="index.html"/> 
+        <link rel="prev" title="Xestión do Proxecto QField" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,10 +86,10 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Guía de Instalación de QField</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Conceptos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">QField Project Management</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Supported data formats</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#table">Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Xestión do Proxecto QField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#custom-svg-symbols-and-settings">Configuración e símbolos SVG personalizados</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Formatos de datos admitidos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table">Táboa</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#raster-data">Raster data</a><ul>
@@ -127,7 +127,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Supported data formats</li>
+    <li>Formatos de datos admitidos</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -142,11 +142,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="supported-data-formats">
-<h1>Supported data formats<a class="headerlink" href="#supported-data-formats" title="Permalink to this headline">¶</a></h1>
-<p>QField supports a wide variety of formats via QGIS data providers and GDAL.
-This page offers a non-exhaustive list of supported data formats.</p>
+<h1>Formatos de datos admitidos<a class="headerlink" href="#supported-data-formats" title="Permalink to this headline">¶</a></h1>
+<p>QField admite unha ampla variedade de formatos a través dos provedores de datos de QGIS e GDAL. Esta páxina ofrece unha lista non exhaustiva de formatos de datos admitidos.</p>
 <div class="section" id="table">
-<h2>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
+<h2>Táboa<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="23%" />
@@ -154,13 +153,17 @@ This page offers a non-exhaustive list of supported data formats.</p>
 <col width="53%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Data Format</th>
-<th class="head">Support</th>
-<th class="head">Notes</th>
+<tr class="row-odd"><th class="head"><p class="first last">Formato dos Datos</p>
+</th>
+<th class="head"><p class="first last">Asistencia</p>
+</th>
+<th class="head"><p class="first last">Notas</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Spatialite</td>
+<tr class="row-even"><td><p class="first last">SpatiaLite</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
@@ -174,7 +177,8 @@ This page offers a non-exhaustive list of supported data formats.</p>
 </tr>
 <tr class="row-odd"><td>Postgis</td>
 <td><span class="yay">✔</span></td>
-<td>Ssl support not yet implemented.</td>
+<td><p class="first last">Compatibilidade ssl aínda non implantada.</p>
+</td>
 </tr>
 <tr class="row-even"><td>MBTiles</td>
 <td><span class="yay">✔</span></td>
@@ -186,16 +190,18 @@ This page offers a non-exhaustive list of supported data formats.</p>
 </tr>
 <tr class="row-even"><td>Tiff</td>
 <td><span class="moreorless">~</span></td>
-<td>JPEG compression not yet supported
-Sponsoring welcome.</td>
+<td><p class="first last">A compresión JPEG aínda non está admitida. Agradeceríase un patrocinio.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>ECW</td>
 <td><span class="nay">✘</span></td>
-<td>License restricts usage.</td>
+<td><p class="first last">A licenza restrinxe o uso.</p>
+</td>
 </tr>
 <tr class="row-even"><td>MrSID</td>
 <td><span class="nay">✘</span></td>
-<td>License restricts usage.</td>
+<td><p class="first last">A licenza restrinxe o uso.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -228,7 +234,7 @@ gdaladdo --config OGR_SQLITE_SYNCHRONOUS OFF -r AVERAGE raster.gpkg 2 4 8 16 32 
         <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="QField User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="QField Project Management" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Xestión do Proxecto QField" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

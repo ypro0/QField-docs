@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Gestão do Projeto do QField &mdash; Documentação QField 0.5.2 - Elbrus</title>
+  <title>QField - Gestão do Projeto &mdash; Documentação QField 0.5.2 - Elbrus</title>
   
 
   
@@ -86,16 +86,16 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Guia do Utilizador do QField</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Conceitos</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Gestão do Projeto do QField</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">QField - Gestão do Projeto</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data-sources">Fontes de Dados</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Definições da Camada de Vetor</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#style">Estilo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Forms and Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formulários e Campos</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Definições e símbolos SVG personalizados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataformat.html">Formatos de dados suportados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataformat.html#raster-data">Raster data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">Guia do Utilizador do QField</a></li>
@@ -129,7 +129,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Gestão do Projeto do QField</li>
+    <li>QField - Gestão do Projeto</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -144,14 +144,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="qfield-project-management">
-<h1>Gestão do Projeto do QField<a class="headerlink" href="#qfield-project-management" title="Link permanente para este título">¶</a></h1>
+<h1>QField - Gestão do Projeto<a class="headerlink" href="#qfield-project-management" title="Link permanente para este título">¶</a></h1>
 <p>You will need a portable version of your QGIS project file (.qgs). Portable
 means that all paths are relative and datasets are reachable from the device.</p>
 <p>Check that <span class="menuselection">Project ‣ Project Properties ‣ General ‣ Save paths</span> is set to &#8220;Relative&#8221; and that all required data files are in the same folder like the .qgs file or a subfolder of it.</p>
 <p>For increased productivity, we suggest having a look at the following plugins:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://plugins.qgis.org/plugins/qconsolidate/">QConsolidate plugin</a></li>
-<li><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Offline Editing plugin</a></li>
+<li><p class="first">Plug-in <a class="reference external" href="https://plugins.qgis.org/plugins/qconsolidate/">QConsolidate</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Plug-in de Edição Off-line</a></p>
+</li>
 </ul>
 <div class="section" id="data-sources">
 <h2>Fontes de Dados<a class="headerlink" href="#data-sources" title="Link permanente para este título">¶</a></h2>
@@ -167,15 +169,17 @@ spatialite files or a postgis database.</p>
 <p>All style settings from QGIS are directly supported by QField. This includes all renderer types like graduated, categorized, rule based, 2.5D as well as data defined symbology.</p>
 </div>
 <div class="section" id="forms-and-fields">
-<h3>Forms and Fields<a class="headerlink" href="#forms-and-fields" title="Link permanente para este título">¶</a></h3>
-<p>QField creates forms similar to, but not equal to QGIS.</p>
+<h3>Formulários e Campos<a class="headerlink" href="#forms-and-fields" title="Link permanente para este título">¶</a></h3>
+<p>QField cria formulários semelhantes, mas não igual ao QGIS.</p>
 <dl class="docutils">
 <dt>Suppress Feature Form</dt>
-<dd>The setting suppress feature form is directly applied to the QField form.</dd>
-<dt>Remember last values</dt>
-<dd>QField offers a much more fine-grained control over the last used values and ignores the QGIS setting.</dd>
+<dd><p class="first last">A função de suprimir a definição é aplicada diretamente para o formulário QField.</p>
+</dd>
+<dt>Lembrar os últimos valores</dt>
+<dd><p class="first last">QField oferece um controlo muito mais minucioso sobre os últimos valores usados e ignora a definição do QGIS.</p>
+</dd>
 <dt>Definições de Campo</dt>
-<dd><p class="first">The field settings from QGIS are supported on a beste effort basis and is constantly being improved.</p>
+<dd><p class="first">As definições de campo do QGIS são suportados em um esforço base e é constantemente melhorado.</p>
 <table border="1" class="last docutils">
 <colgroup>
 <col width="24%" />
@@ -208,7 +212,8 @@ spatialite files or a postgis database.</p>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Value Map</td>
+<tr class="row-even"><td><p class="first last">Mapa de Valores</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
@@ -233,7 +238,7 @@ Contact us for development.</td>
 </div>
 </div>
 <div class="section" id="custom-svg-symbols-and-settings">
-<h1>Custom SVG symbols and settings<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Link permanente para este título">¶</a></h1>
+<h1>Definições e símbolos SVG personalizados<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Link permanente para este título">¶</a></h1>
 <p>In the about dialog you can see where the shared folders are on your device.</p>
 <p>If you want to use custom symbols you need to put them there using a file manager.</p>
 </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>QField Project Management &mdash; QField 0.5.2 - Elbrus documentation</title>
+  <title>Xestión do Proxecto QField &mdash; QField 0.5.2 - Elbrus documentation</title>
   
 
   
@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="QField 0.5.2 - Elbrus documentation" href="../index.html"/>
-        <link rel="next" title="Supported data formats" href="dataformat.html"/>
+        <link rel="next" title="Formatos de datos admitidos" href="dataformat.html"/>
         <link rel="prev" title="Conceptos" href="../concepts/index.html"/> 
 
   
@@ -86,17 +86,17 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Guía de Instalación de QField</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Conceptos</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">QField Project Management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data-sources">Data sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Vector Layer Settings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#style">Style</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Forms and Fields</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Xestión do Proxecto QField</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-sources">Fontes de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Configuración de Capa Vectorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#style">Estilo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formularios e Campos</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataformat.html">Supported data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Configuración e símbolos SVG personalizados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataformat.html">Formatos de datos admitidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataformat.html#raster-data">Raster data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">QField User Guide</a></li>
 </ul>
@@ -129,7 +129,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>QField Project Management</li>
+    <li>Xestión do Proxecto QField</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -144,38 +144,39 @@
            <div itemprop="articleBody">
             
   <div class="section" id="qfield-project-management">
-<h1>QField Project Management<a class="headerlink" href="#qfield-project-management" title="Permalink to this headline">¶</a></h1>
-<p>You will need a portable version of your QGIS project file (.qgs). Portable
-means that all paths are relative and datasets are reachable from the device.</p>
-<p>Check that <span class="menuselection">Project ‣ Project Properties ‣ General ‣ Save paths</span> is set to &#8220;Relative&#8221; and that all required data files are in the same folder like the .qgs file or a subfolder of it.</p>
-<p>For increased productivity, we suggest having a look at the following plugins:</p>
+<h1>Xestión do Proxecto QField<a class="headerlink" href="#qfield-project-management" title="Permalink to this headline">¶</a></h1>
+<p>Precisarás unha versión portable do ficheiro de proxecto QGIS (.qgs). Por portable enténdese que tódalas rutas son relativas e os conxuntos de datos están accesibles dende o dispositivo.</p>
+<p>Comproba que <span class="menuselection">Proxecto ‣ Propiedades de Proxecto ‣ Xeral ‣ Gardar rutas</span> está establecida a &#8220;Relativa&#8221; e que tódolos ficheiros de datos solicitados están no mesmo cartafol que o ficheiro .qgs ou nun sub-cartafol del.</p>
+<p>Para incrementar a produtividade, suxerimos botar unha vista ós seguintes plugins:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://plugins.qgis.org/plugins/qconsolidate/">QConsolidate plugin</a></li>
-<li><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Offline Editing plugin</a></li>
+<li><p class="first"><a class="reference external" href="https://plugins.qgis.org/plugins/qconsolidate/">Plugin QConsolidate</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Plugin de Edición sen Conexión</a></p>
+</li>
 </ul>
 <div class="section" id="data-sources">
-<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h2>
-<p>While many data providers are supported, there are still some stability issues
-with the OGR provider (E.g. Shapefile). For best stability you should use
-spatialite files or a postgis database.</p>
+<h2>Fontes de datos<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h2>
+<p>Aínda que se admiten moitos provedores de datos, hai aínda algunhas incidencias de estabilidade co provedor OGR (Por exemplo Shapefile). Para unha mellor estabilidade debes utilizar ficheiros spatialite ou unha base de datos postgis.</p>
 </div>
 <div class="section" id="vector-layer-settings">
-<h2>Vector Layer Settings<a class="headerlink" href="#vector-layer-settings" title="Permalink to this headline">¶</a></h2>
-<p>Most of the settings which QGIS offers are directly supported by QField without any extra effort.</p>
+<h2>Configuración de Capa Vectorial<a class="headerlink" href="#vector-layer-settings" title="Permalink to this headline">¶</a></h2>
+<p>A maioría dos axustes que ofrece QGIS son admitidos directamente por QField sen ningún esforzo extra.</p>
 <div class="section" id="style">
-<h3>Style<a class="headerlink" href="#style" title="Permalink to this headline">¶</a></h3>
-<p>All style settings from QGIS are directly supported by QField. This includes all renderer types like graduated, categorized, rule based, 2.5D as well as data defined symbology.</p>
+<h3>Estilo<a class="headerlink" href="#style" title="Permalink to this headline">¶</a></h3>
+<p>Toda a configuración de estilo de QGIS admítese directamente por QField. Isto inclúe tódolos tipos de renderización como graduado, por categorías, baseado en normas, 2.5D así como a simboloxía definida polos datos.</p>
 </div>
 <div class="section" id="forms-and-fields">
-<h3>Forms and Fields<a class="headerlink" href="#forms-and-fields" title="Permalink to this headline">¶</a></h3>
-<p>QField creates forms similar to, but not equal to QGIS.</p>
+<h3>Formularios e Campos<a class="headerlink" href="#forms-and-fields" title="Permalink to this headline">¶</a></h3>
+<p>QField crea formularios de forma similar, pero non igual a QGIS.</p>
 <dl class="docutils">
-<dt>Suppress Feature Form</dt>
-<dd>The setting suppress feature form is directly applied to the QField form.</dd>
-<dt>Remember last values</dt>
-<dd>QField offers a much more fine-grained control over the last used values and ignores the QGIS setting.</dd>
-<dt>Field settings</dt>
-<dd><p class="first">The field settings from QGIS are supported on a beste effort basis and is constantly being improved.</p>
+<dt>Eliminar Formulario de Entidade</dt>
+<dd><p class="first last">A configuración suprimir formulario de entidade aplícase directamente ó formulario de QField.</p>
+</dd>
+<dt>Lembrar os últimos valores</dt>
+<dd><p class="first last">QField ofrece un control máis refinado sobre os últimos valores usados e ignora a configuración de QGIS.</p>
+</dd>
+<dt>Configuración do campo</dt>
+<dd><p class="first">A configuración de campo de QGIS está dispoñible en base ó mellor esforzo e constantemente está sendo mellorado.</p>
 <table border="1" class="last docutils">
 <colgroup>
 <col width="24%" />
@@ -183,25 +184,33 @@ spatialite files or a postgis database.</p>
 <col width="63%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Field type</th>
-<th class="head">Support</th>
-<th class="head">Notes</th>
+<tr class="row-odd"><th class="head"><p class="first last">Tipo de campo</p>
+</th>
+<th class="head"><p class="first last">Asistencia</p>
+</th>
+<th class="head"><p class="first last">Notas</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Text Edit</td>
+<tr class="row-even"><td><p class="first last">Edición de texto</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td><ul class="first last simple">
-<li>Multiline is always allowed</li>
-<li>HTML is not supported</li>
+<li><p class="first">A multiliña é sempre permitida</p>
+</li>
+<li><p class="first">O HTML non está admitido</p>
+</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td>Check Box</td>
+<tr class="row-odd"><td><p class="first last">Caixa de selección</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Value Map</td>
+<tr class="row-even"><td><p class="first last">Mapa de valores</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
@@ -226,7 +235,7 @@ Contact us for development.</td>
 </div>
 </div>
 <div class="section" id="custom-svg-symbols-and-settings">
-<h1>Custom SVG symbols and settings<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Permalink to this headline">¶</a></h1>
+<h1>Configuración e símbolos SVG personalizados<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Permalink to this headline">¶</a></h1>
 <p>In the about dialog you can see where the shared folders are on your device.</p>
 <p>If you want to use custom symbols you need to put them there using a file manager.</p>
 </div>
@@ -238,7 +247,7 @@ Contact us for development.</td>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dataformat.html" class="btn btn-neutral float-right" title="Supported data formats" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dataformat.html" class="btn btn-neutral float-right" title="Formatos de datos admitidos" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../concepts/index.html" class="btn btn-neutral" title="Conceptos" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
