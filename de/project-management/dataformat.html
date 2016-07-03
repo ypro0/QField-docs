@@ -92,7 +92,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#table">Table</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#raster-data">Raster data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#raster-data">Raster data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#use-geopackage">Use GeoPackage</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">QField Benutzerhandbuch</a></li>
 </ul>
 
@@ -207,10 +210,13 @@ happy to help you with the implementation.</p>
 <div class="section" id="raster-data">
 <h1>Raster data<a class="headerlink" href="#raster-data" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Raster data can become quite big quickly, when working with uncompressed tiff files it&#8217;s often several Gb of data. Especially on mobile devices, this is inefficient.</p>
+<div class="section" id="use-geopackage">
+<h2>Use GeoPackage<a class="headerlink" href="#use-geopackage" title="Link zu dieser Überschrift">¶</a></h2>
 <p>We recommend to us the geopackage format to deal with raster data. The following commands will convert a file called <code class="code docutils literal"><span class="pre">raster.tif</span></code> to a file <code class="code docutils literal"><span class="pre">raster.gpkg</span></code> with pyramids. Make sure you adjust EPSG:21781 (CH1903 LV03) to your desired CRS.</p>
 <div class="code bash highlight-python"><div class="highlight"><pre><span></span>gdal_translate --config OGR_SQLITE_SYNCHRONOUS OFF -co  APPEND_SUBDATASET=YES -co TILE_FORMAT=PNG_JPEG -a_srs EPSG:21781 -of GPKG raster.tif raster.gpkg
 gdaladdo --config OGR_SQLITE_SYNCHRONOUS OFF -r AVERAGE raster.gpkg 2 4 8 16 32 64 128 256
 </pre></div>
+</div>
 </div>
 </div>
 
