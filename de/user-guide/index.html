@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="QField 0.5.2 - Elbrus Dokumentation" href="../index.html"/>
-        <link rel="prev" title="Supported data formats" href="../project-management/dataformat.html"/> 
+        <link rel="prev" title="Unterstützte Datenformate" href="../project-management/dataformat.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -84,25 +84,25 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">QField Installationsleitfaden</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Konzepte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../project-management/index.html">QField Projektverwaltung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../project-management/index.html#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html">Supported data formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html#raster-data">Raster data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/index.html#custom-svg-symbols-and-settings">Eigene SVG Symbole und Einstellungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html">Unterstützte Datenformate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/dataformat.html#raster-data">Raster Daten</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">QField Benutzerhandbuch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basic-workflow">Basic workflow</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#switch-modes">Switch modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-workflow">Grundätzlicher Arbeitsablauf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#switch-modes">Modi wechseln</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#opening-a-project">Ein Projekt öffnen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#identify-features">Identify features</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#exceptions-to-identified-layers">Exceptions to identified layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identify-features">Objekte identifizieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exceptions-to-identified-layers">Nichtidentifizierbare Ebenen</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#gps">GPS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#digitize">Digitize</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#attribute-form">Attribute form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitize">Digitalisieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-form">Attributformular</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#delete-features">Delete Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-features">Objekte löschen</a></li>
 </ul>
 </li>
 </ul>
@@ -154,48 +154,42 @@
   <div class="section" id="qfield-user-guide">
 <h1>QField Benutzerhandbuch<a class="headerlink" href="#qfield-user-guide" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="basic-workflow">
-<h2>Basic workflow<a class="headerlink" href="#basic-workflow" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Grundätzlicher Arbeitsablauf<a class="headerlink" href="#basic-workflow" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="switch-modes">
-<h3>Switch modes<a class="headerlink" href="#switch-modes" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Modes are switched via <span class="menuselection">Menu button ‣ mode</span></p>
+<h3>Modi wechseln<a class="headerlink" href="#switch-modes" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Modi werden gewechselt via <span class="menuselection">Menü Knopf ‣ Modus</span></p>
 </div>
 <div class="section" id="opening-a-project">
 <h3>Ein Projekt öffnen<a class="headerlink" href="#opening-a-project" title="Link zu dieser Überschrift">¶</a></h3>
 </div>
 <div class="section" id="identify-features">
-<h3>Identify features<a class="headerlink" href="#identify-features" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Objekte identifizieren<a class="headerlink" href="#identify-features" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Ein langer Druck auf ein Objekt identifiziert dieses und öffnet das Attributformular. Der zurück Knopf schliesst das Fenster wieder.</p>
 <div class="section" id="exceptions-to-identified-layers">
-<h4>Exceptions to identified layers<a class="headerlink" href="#exceptions-to-identified-layers" title="Link zu dieser Überschrift">¶</a></h4>
-<p>Often it is not required to be able to query every layer. Some layers are only present as basemap and their attributes are not of interest.</p>
-<p>You can manage this layerlist in QGIS desktop in <span class="menuselection">Project ‣ Project Properties ‣ Identify Layers</span> and uncheck the base layers.</p>
+<h4>Nichtidentifizierbare Ebenen<a class="headerlink" href="#exceptions-to-identified-layers" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Oft ist es nicht nötig, alle Ebenen abfragen zu können. Manche Ebenen sind lediglich als Basiskarte da und ihre Attribute nicht von Interesse.</p>
+<p>Dies kann in QGIS konfiguriert werden im Menü <span class="menuselection">Projekt ‣ Projekteigenschaften ‣ Identifizierbare Ebenen</span>.</p>
 </div>
 </div>
 <div class="section" id="gps">
 <h3>GPS<a class="headerlink" href="#gps" title="Link zu dieser Überschrift">¶</a></h3>
-<p>A long press on the GPS button will show the GPS menu.</p>
+<p>Ein langer druck auf den GPS Knopf zeigt das GPS Menü an.</p>
 </div>
 <div class="section" id="digitize">
-<h3>Digitize<a class="headerlink" href="#digitize" title="Link zu dieser Überschrift">¶</a></h3>
-<p>To start digitizing new features <a class="reference internal" href="#switch-modes">Switch modes</a> to digitizing.</p>
-<p>A new combobox will appear next to the menu button which lists the layers
-available for digitizing. At the moment (QField 0.5), QField only supports point
-layers.</p>
-<p>navigate the crosshair in the center of the screen to the desired location and
-click the check at the lower right of the screen to confirm the creation of a
-new point feature. If the feature form is not suppressed (in the QGIS project
-vector layer properties), the user will be asked to enter the attributes for
-the new feature.</p>
+<h3>Digitalisieren<a class="headerlink" href="#digitize" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um neue Objekte zu digitalisieren starte dies via <a class="reference internal" href="#switch-modes">Modi wechseln</a>.</p>
+<p>Eine neue Auswahlliste erscheint neben dem Menüknopf und listet die für die digitalisierung verfügbaren Ebenen.
+Im Moment (QField 0.6) werden Punkte und Linien unterstützt. Ebenen können auch als nicht bearbeitbar konfigurier werden. Dies erfolgt analog zur Konfiguration von nicht identifizierbaren Ebenen.</p>
+<p>Platziere das Fadenkreuz in der Bildschirmmitte an der gewünschten Stelle und klicke den Stift an der rechten unteren Bildschirmecke um das erzeugen eines neuen Punktes zu bestätigen.</p>
+<p>Platziere das Fadenkreuz in der Bildschirmmitte an der gewünschten Stelle für den Start der neuen Linie und klicke den Stift in der rechten unteren Ecke des Bildschirmes. Weitere Punkte können nun hinzugefügt und wieder gelöscht werden bis die Linie komplett ist. Beim letzten Punkt  muss der Speichern Knopf gedrückt werden.</p>
 <div class="section" id="attribute-form">
-<h4>Attribute form<a class="headerlink" href="#attribute-form" title="Link zu dieser Überschrift">¶</a></h4>
-<p>The form which appears allows entering attribute values for the new feature. The checkboxes
-at the right of every attribute allow for remembering each attribu. The checkboxes
-at the right of every attribute allow for remembering each attribute individually.</p>
+<h4>Attributformular<a class="headerlink" href="#attribute-form" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Nach dem Digitalisieren einer Geometrie wird das Attributformular angezeigt, falls es nicht unterdrückt wurde. Der Anwender wird gebeten, die Attributwerde für das neue Objekt einzugeben. Das Formlar erlaubt die Eingabe von Attributwerden für das neue Objekt. Die Auswahlkästchen rechts neben jedem Attribut ermöglichen es, jeden Attributwert einzeln zu speichern für die darauffolgend digitalisierten Objekte.</p>
 </div>
 </div>
 <div class="section" id="delete-features">
-<h3>Delete Features<a class="headerlink" href="#delete-features" title="Link zu dieser Überschrift">¶</a></h3>
-<p>To delete a feature, identify it first and tap the trash icon.</p>
+<h3>Objekte löschen<a class="headerlink" href="#delete-features" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um ein Objekt zu löschen muss es zuerst identifiziert werden und dann mit einem Klick auf den Papierkorb gelöscht werden.</p>
 </div>
 </div>
 </div>
@@ -208,7 +202,7 @@ at the right of every attribute allow for remembering each attribute individuall
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../project-management/dataformat.html" class="btn btn-neutral" title="Supported data formats" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../project-management/dataformat.html" class="btn btn-neutral" title="Unterstützte Datenformate" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

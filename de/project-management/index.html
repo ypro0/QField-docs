@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="QField 0.5.2 - Elbrus Dokumentation" href="../index.html"/>
-        <link rel="next" title="Supported data formats" href="dataformat.html"/>
-        <link rel="prev" title="Concepts" href="../concepts/index.html"/> 
+        <link rel="next" title="Unterstützte Datenformate" href="dataformat.html"/>
+        <link rel="prev" title="Konzepte" href="../concepts/index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,19 +85,19 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">QField Installationsleitfaden</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Konzepte</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">QField Projektverwaltung</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data-sources">Datenquellen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Vector Layer Settings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#style">Style</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Forms and Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Vektorebeneneinstellungen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#style">Stil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formulare und Felder</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Custom SVG symbols and settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataformat.html">Supported data formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataformat.html#raster-data">Raster data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#custom-svg-symbols-and-settings">Eigene SVG Symbole und Einstellungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataformat.html">Unterstützte Datenformate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataformat.html#raster-data">Raster Daten</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">QField Benutzerhandbuch</a></li>
 </ul>
 
@@ -145,35 +145,38 @@
             
   <div class="section" id="qfield-project-management">
 <h1>QField Projektverwaltung<a class="headerlink" href="#qfield-project-management" title="Link zu dieser Überschrift">¶</a></h1>
-<p>You will need a portable version of your QGIS project file (.qgs). Portable
-means that all paths are relative and datasets are reachable from the device.</p>
-<p>Check that <span class="menuselection">Project ‣ Project Properties ‣ General ‣ Save paths</span> is set to &#8220;Relative&#8221; and that all required data files are in the same folder like the .qgs file or a subfolder of it.</p>
-<p>For increased productivity, we suggest having a look at the following plugins:</p>
+<p>Es wird eine portable Version der QGIS Projektdatei (.qgs) benötigt. Portabel heisst, dass alle Pfade relativ sind und Datensätze für das Gerät erreichbar sind.</p>
+<p><span class="menuselection">Projekt ‣ Projekteigenschaften ‣ Allgemein ‣ Pfade speichern</span> muss auf &#8220;Relativ&#8221; gestellt sein und alle benötigten Dateien müssen im selben Ordner wie die Projektdatei sein oder einem Unterordner davon.</p>
+<p>Um die Arbeit zu erleichtern empfehlen wir, die folgenden Plugins zu probieren:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://plugins.qgis.org/plugins/qconsolidate/">QConsolidate plugin</a></li>
-<li><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Offline Editing plugin</a></li>
+<li><p class="first"><a class="reference external" href="https://plugins.qgis.org/plugins/qconsolidate/">QConsolidate Plugin</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="https://docs.qgis.org/2.14/en/docs/user_manual/plugins/plugins_offline_editing.html">Offline Editing Plugin</a></p>
+</li>
 </ul>
 <div class="section" id="data-sources">
 <h2>Datenquellen<a class="headerlink" href="#data-sources" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es wird ein breites Spektrum an Datenformaten unterstützt. Aufgrund von Stabilitätsproblemen, die sich in der Vergangenheit mit OGR basierten Formaten (Bspw. Shapefile) gezeigt haben, wird empfohlen Sptialite Dateien oder eine Postgis Datenbank zu benützen.</p>
 </div>
 <div class="section" id="vector-layer-settings">
-<h2>Vector Layer Settings<a class="headerlink" href="#vector-layer-settings" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Most of the settings which QGIS offers are directly supported by QField without any extra effort.</p>
+<h2>Vektorebeneneinstellungen<a class="headerlink" href="#vector-layer-settings" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Die meisten Einstellungen, welche QGIS anbietet werden direkt von QField unterstützt, ohne zusätzlichen Aufwand.</p>
 <div class="section" id="style">
-<h3>Style<a class="headerlink" href="#style" title="Link zu dieser Überschrift">¶</a></h3>
-<p>All style settings from QGIS are directly supported by QField. This includes all renderer types like graduated, categorized, rule based, 2.5D as well as data defined symbology.</p>
+<h3>Stil<a class="headerlink" href="#style" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Alle Stileinstellungen von QGIS werden direkt von QField unterstützt. Die beinhalteet alle Renderertypen wie Graduiert, Kategorisiert, Regelbasiert und 2.5D ebenso wie datendefinierte Symbologie.</p>
 </div>
 <div class="section" id="forms-and-fields">
-<h3>Forms and Fields<a class="headerlink" href="#forms-and-fields" title="Link zu dieser Überschrift">¶</a></h3>
-<p>QField creates forms similar to, but not equal to QGIS.</p>
+<h3>Formulare und Felder<a class="headerlink" href="#forms-and-fields" title="Link zu dieser Überschrift">¶</a></h3>
+<p>QField erzeugt Formulare ähnlich wie, aber nicht komplett gleich wie QGIS</p>
 <dl class="docutils">
-<dt>Suppress Feature Form</dt>
-<dd>The setting suppress feature form is directly applied to the QField form.</dd>
-<dt>Remember last values</dt>
-<dd>QField offers a much more fine-grained control over the last used values and ignores the QGIS setting.</dd>
-<dt>Field settings</dt>
-<dd><p class="first">The field settings from QGIS are supported on a beste effort basis and is constantly being improved.</p>
+<dt>Formulare unterdrücken</dt>
+<dd><p class="first last">Diese Option wird direkt unterstützt. Wenn Sie gesetzt ist wird das Formular in QField beim Erzeugen eines Objektes nicht angezeigt.</p>
+</dd>
+<dt>Letzte Werte erinnern</dt>
+<dd><p class="first last">QField bietet eine viel finkörnigere Kontrolle über das Erinnern von Attributen als QGIS und ignoriert die entsprechende QGIS Einstellung.</p>
+</dd>
+<dt>Feldeinstellungen</dt>
+<dd><p class="first">Die Feldeinstellungen von QGIS sind so gut wie möglich unterstützt und werden kontinuierlich verbessert.</p>
 <table border="1" class="last docutils">
 <colgroup>
 <col width="24%" />
@@ -181,40 +184,52 @@ means that all paths are relative and datasets are reachable from the device.</p
 <col width="63%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Field type</th>
-<th class="head">Support</th>
-<th class="head">Notes</th>
+<tr class="row-odd"><th class="head"><p class="first last">Feldtyp</p>
+</th>
+<th class="head"><p class="first last">Unterstützung</p>
+</th>
+<th class="head"><p class="first last">Notiz</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Text Edit</td>
 <td><span class="yay">✔</span></td>
 <td><ul class="first last simple">
-<li>Multiline is always allowed</li>
-<li>HTML is not supported</li>
+<li><p class="first">Mehrzeilige eingaben sind immer erlaubt.</p>
+</li>
+<li><p class="first">HTML wird nicht unterstützt</p>
+</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td>Check Box</td>
+<tr class="row-odd"><td><p class="first last">Kontrollkästchen</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Value Map</td>
+<tr class="row-even"><td><p class="first last">Werteabbildung</p>
+</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>External Resource</td>
+<tr class="row-odd"><td><p class="first last">Externe Resource</p>
+</td>
 <td><span class="nay">✔</span></td>
-<td>Will be combined with shooting photos.
-Contact us for development.</td>
+<td><p class="first last">Wird mit Photo schiessen kombiniert werden. Kontaktiere und für die Entwicklung.</p>
+</td>
 </tr>
-<tr class="row-even"><td>Date Time</td>
+<tr class="row-even"><td><p class="first last">Datum/Zei</p>
+</td>
 <td><span class="nay">✔</span></td>
-<td>Contact us for development.</td>
+<td><p class="first last">Kontaktiere uns für die Entwicklung.</p>
+</td>
 </tr>
-<tr class="row-odd"><td>Others</td>
+<tr class="row-odd"><td><p class="first last">Andere</p>
+</td>
 <td><span class="nay">✔</span></td>
-<td>Contact us for development.</td>
+<td><p class="first last">Kontaktiere uns für die Entwicklung.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -224,9 +239,9 @@ Contact us for development.</td>
 </div>
 </div>
 <div class="section" id="custom-svg-symbols-and-settings">
-<h1>Custom SVG symbols and settings<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Link zu dieser Überschrift">¶</a></h1>
-<p>In the about dialog you can see where the shared folders are on your device.</p>
-<p>If you want to use custom symbols you need to put them there using a file manager.</p>
+<h1>Eigene SVG Symbole und Einstellungen<a class="headerlink" href="#custom-svg-symbols-and-settings" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Im &#8220;Über&#8221; Dialog sind die Ordner sichtbar, die auf dem Gerät dafür verwendet werden.</p>
+<p>Falls eigene SVG Symbole verwendet werden sollen, müssen diese manuell mit einem Dateimanager in den entsprechenden Ordner kopiert werden.</p>
 </div>
 
 
@@ -236,10 +251,10 @@ Contact us for development.</td>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dataformat.html" class="btn btn-neutral float-right" title="Supported data formats" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dataformat.html" class="btn btn-neutral float-right" title="Unterstützte Datenformate" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../concepts/index.html" class="btn btn-neutral" title="Concepts" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../concepts/index.html" class="btn btn-neutral" title="Konzepte" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
