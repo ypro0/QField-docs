@@ -92,6 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#table">Table</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#raster-data">Raster data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">QField User Guide</a></li>
 </ul>
 
@@ -161,32 +162,36 @@ This page offers a non-exhaustive list of supported data formats.</p>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>WMS</td>
+<tr class="row-odd"><td>Geopackage</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Postgis</td>
+<tr class="row-even"><td>WMS</td>
+<td><span class="yay">✔</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Postgis</td>
 <td><span class="yay">✔</span></td>
 <td>Ssl support not yet implemented.</td>
 </tr>
-<tr class="row-odd"><td>MBTiles</td>
+<tr class="row-even"><td>MBTiles</td>
 <td><span class="yay">✔</span></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>Shapefile</td>
-<td><span class="moreorless">~</span></td>
-<td>May occasionally produce crashes.</td>
+<tr class="row-odd"><td>Shapefile</td>
+<td><span class="yay">✔</span></td>
+<td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td>Tiff</td>
+<tr class="row-even"><td>Tiff</td>
 <td><span class="moreorless">~</span></td>
 <td>JPEG compression not yet supported
 Sponsoring welcome.</td>
 </tr>
-<tr class="row-even"><td>ECW</td>
+<tr class="row-odd"><td>ECW</td>
 <td><span class="nay">✘</span></td>
 <td>License restricts usage.</td>
 </tr>
-<tr class="row-odd"><td>MrSID</td>
+<tr class="row-even"><td>MrSID</td>
 <td><span class="nay">✘</span></td>
 <td>License restricts usage.</td>
 </tr>
@@ -194,9 +199,18 @@ Sponsoring welcome.</td>
 </table>
 </div></blockquote>
 <p>If you don&#8217;t find your favorite data format on this table, please check if it
-works and adapt the list above to share your findings. If it does not work,
+works and <a class="reference external" href="https://github.com/opengisch/QField-docs/edit/master/en/project-management/dataformat.rst">adapt the list above</a> to share your findings. If it does not work,
 please <a class="reference external" href="https://github.com/opengisch/OSGeo4A/issues">open an issue</a>. We will be
 happy to help you with the implementation.</p>
+</div>
+</div>
+<div class="section" id="raster-data">
+<h1>Raster data<a class="headerlink" href="#raster-data" title="Link a questa intestazione">¶</a></h1>
+<p>Raster data can become quite big quickly, when working with uncompressed tiff files it&#8217;s often several Gb of data. Especially on mobile devices, this is inefficient.</p>
+<p>We recommend to us the geopackage format to deal with raster data. The following commands will convert a file called <code class="code docutils literal"><span class="pre">raster.tif</span></code> to a file <code class="code docutils literal"><span class="pre">raster.gpkg</span></code> with pyramids. Make sure you adjust EPSG:21781 (CH1903 LV03) to your desired CRS.</p>
+<div class="code bash highlight-python"><div class="highlight"><pre><span></span>gdal_translate --config OGR_SQLITE_SYNCHRONOUS OFF -co  APPEND_SUBDATASET=YES -co TILE_FORMAT=PNG_JPEG -a_srs EPSG:21781 -of GPKG raster.tif raster.gpkg
+gdaladdo --config OGR_SQLITE_SYNCHRONOUS OFF -r AVERAGE raster.gpkg 2 4 8 16 32 64 128 256
+</pre></div>
 </div>
 </div>
 
