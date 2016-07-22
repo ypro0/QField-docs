@@ -87,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Guide d&#8217;installation QField</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Gestion du projet QField</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data-sources">Sources de données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-reference-systems">Coordinate Reference Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Configuration des couches vecteur</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#style">Style</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formulaires et attributs</a></li>
@@ -155,9 +155,20 @@
 <li><p class="first"><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Plugin Offline Editing plugin</a></p>
 </li>
 </ul>
-<div class="section" id="data-sources">
-<h2>Sources de données<a class="headerlink" href="#data-sources" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Bien que de nombreux formats soient supportés, certains problèmes de stabilité existent avec OGR (p.e. shapes). Pour une meilleure stabilité, il est conseillé d&#8217;utiliser Spatialite ou PostGIS.</p>
+<div class="section" id="coordinate-reference-systems">
+<h2>Coordinate Reference Systems<a class="headerlink" href="#coordinate-reference-systems" title="Lien permanent vers ce titre">¶</a></h2>
+<p>QField uses the Coordinate Reference System (CRS) information found in the project file.</p>
+<ul class="simple">
+<li>Project CRS</li>
+<li>On the fly reprojection (OTF) is used for visualization</li>
+<li>Layer CRS</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">QField does not respect OTF when digitizing new features.
+Make sure that all the layers on which you digitize are in the same CRS like the project.
+If you fail to do so it will look as if new features are not saved because they end up in far far away.</p>
+</div>
 </div>
 <div class="section" id="vector-layer-settings">
 <h2>Configuration des couches vecteur<a class="headerlink" href="#vector-layer-settings" title="Lien permanent vers ce titre">¶</a></h2>

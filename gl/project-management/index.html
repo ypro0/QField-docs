@@ -87,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Guía de Instalación de QField</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Conceptos</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Xestión do Proxecto QField</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data-sources">Fontes de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-reference-systems">Coordinate Reference Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Configuración de Capa Vectorial</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#style">Estilo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formularios e Campos</a></li>
@@ -155,9 +155,20 @@
 <li><p class="first"><a class="reference external" href="https://docs.qgis.org/2.8/en/docs/user_manual/plugins/plugins_offline_editing.html">Plugin de Edición sen Conexión</a></p>
 </li>
 </ul>
-<div class="section" id="data-sources">
-<h2>Fontes de datos<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h2>
-<p>Aínda que se admiten moitos provedores de datos, hai aínda algunhas incidencias de estabilidade co provedor OGR (Por exemplo Shapefile). Para unha mellor estabilidade debes utilizar ficheiros spatialite ou unha base de datos postgis.</p>
+<div class="section" id="coordinate-reference-systems">
+<h2>Coordinate Reference Systems<a class="headerlink" href="#coordinate-reference-systems" title="Permalink to this headline">¶</a></h2>
+<p>QField uses the Coordinate Reference System (CRS) information found in the project file.</p>
+<ul class="simple">
+<li>Project CRS</li>
+<li>On the fly reprojection (OTF) is used for visualization</li>
+<li>Layer CRS</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">QField does not respect OTF when digitizing new features.
+Make sure that all the layers on which you digitize are in the same CRS like the project.
+If you fail to do so it will look as if new features are not saved because they end up in far far away.</p>
+</div>
 </div>
 <div class="section" id="vector-layer-settings">
 <h2>Configuración de Capa Vectorial<a class="headerlink" href="#vector-layer-settings" title="Permalink to this headline">¶</a></h2>

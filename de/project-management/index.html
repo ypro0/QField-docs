@@ -87,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">QField Installationsleitfaden</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../concepts/index.html">Konzepte</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">QField Projektverwaltung</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data-sources">Datenquellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-reference-systems">Coordinate Reference Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vector-layer-settings">Vektorebeneneinstellungen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#style">Stil</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#forms-and-fields">Formulare und Felder</a></li>
@@ -155,9 +155,20 @@
 <li><p class="first"><a class="reference external" href="https://docs.qgis.org/2.14/en/docs/user_manual/plugins/plugins_offline_editing.html">Offline Editing Plugin</a></p>
 </li>
 </ul>
-<div class="section" id="data-sources">
-<h2>Datenquellen<a class="headerlink" href="#data-sources" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Es wird ein breites Spektrum an Datenformaten unterstützt. Aufgrund von Stabilitätsproblemen, die sich in der Vergangenheit mit OGR basierten Formaten (Bspw. Shapefile) gezeigt haben, wird empfohlen Sptialite Dateien oder eine Postgis Datenbank zu benützen.</p>
+<div class="section" id="coordinate-reference-systems">
+<h2>Coordinate Reference Systems<a class="headerlink" href="#coordinate-reference-systems" title="Link zu dieser Überschrift">¶</a></h2>
+<p>QField uses the Coordinate Reference System (CRS) information found in the project file.</p>
+<ul class="simple">
+<li>Project CRS</li>
+<li>On the fly reprojection (OTF) is used for visualization</li>
+<li>Layer CRS</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">QField does not respect OTF when digitizing new features.
+Make sure that all the layers on which you digitize are in the same CRS like the project.
+If you fail to do so it will look as if new features are not saved because they end up in far far away.</p>
+</div>
 </div>
 <div class="section" id="vector-layer-settings">
 <h2>Vektorebeneneinstellungen<a class="headerlink" href="#vector-layer-settings" title="Link zu dieser Überschrift">¶</a></h2>
