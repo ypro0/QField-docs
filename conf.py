@@ -211,11 +211,13 @@ latex_elements = {
   # Additional stuff for the LaTeX preamble.
   'preamble': u'''\\usepackage{combelow}
     \\usepackage{newunicodechar}
+    \\usepackage{amssymb}
 
     \\newunicodechar{Ș}{\\cb{S}}
     \\newunicodechar{ș}{\\cb{s}}
     \\newunicodechar{Ț}{\\cb{T}}
     \\newunicodechar{ț}{\\cb{t}}
+    \\newunicodechar{✔}{\\checkmark}
     % old babel-italian does not have setactivedoublequote,
     % avoid "undefined control sequence" error
     \\providecommand{\\setactivedoublequote}{}
